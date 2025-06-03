@@ -15,9 +15,6 @@ class Model(Enum):
     CLAUDE_3_OPUS_20240229 = 'claude-3-opus-20240229'
     CLAUDE_OPUS_4_20250514 = 'claude-opus-4-20250514'
     CLAUDE_SONNET_4_20250514 = 'claude-sonnet-4-20250514'
-    MODELS_AQA = 'models/aqa'
-    MODELS_EMBEDDING_001 = 'models/embedding-001'
-    MODELS_EMBEDDING_GECKO_001 = 'models/embedding-gecko-001'
     MODELS_GEMINI_1_0_PRO_VISION_LATEST = 'models/gemini-1.0-pro-vision-latest'
     MODELS_GEMINI_1_5_FLASH = 'models/gemini-1.5-flash'
     MODELS_GEMINI_1_5_FLASH_001 = 'models/gemini-1.5-flash-001'
@@ -41,26 +38,20 @@ class Model(Enum):
     MODELS_GEMINI_2_0_FLASH_LITE_001 = 'models/gemini-2.0-flash-lite-001'
     MODELS_GEMINI_2_0_FLASH_LITE_PREVIEW = 'models/gemini-2.0-flash-lite-preview'
     MODELS_GEMINI_2_0_FLASH_LITE_PREVIEW_02_05 = 'models/gemini-2.0-flash-lite-preview-02-05'
-    MODELS_GEMINI_2_0_FLASH_LIVE_001 = 'models/gemini-2.0-flash-live-001'
     MODELS_GEMINI_2_0_FLASH_PREVIEW_IMAGE_GENERATION = 'models/gemini-2.0-flash-preview-image-generation'
     MODELS_GEMINI_2_0_FLASH_THINKING_EXP = 'models/gemini-2.0-flash-thinking-exp'
     MODELS_GEMINI_2_0_FLASH_THINKING_EXP_01_21 = 'models/gemini-2.0-flash-thinking-exp-01-21'
     MODELS_GEMINI_2_0_FLASH_THINKING_EXP_1219 = 'models/gemini-2.0-flash-thinking-exp-1219'
     MODELS_GEMINI_2_0_PRO_EXP = 'models/gemini-2.0-pro-exp'
     MODELS_GEMINI_2_0_PRO_EXP_02_05 = 'models/gemini-2.0-pro-exp-02-05'
-    MODELS_GEMINI_2_5_FLASH_EXP_NATIVE_AUDIO_THINKING_DIALOG = 'models/gemini-2.5-flash-exp-native-audio-thinking-dialog'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17 = 'models/gemini-2.5-flash-preview-04-17'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17_THINKING = 'models/gemini-2.5-flash-preview-04-17-thinking'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_05_20 = 'models/gemini-2.5-flash-preview-05-20'
-    MODELS_GEMINI_2_5_FLASH_PREVIEW_NATIVE_AUDIO_DIALOG = 'models/gemini-2.5-flash-preview-native-audio-dialog'
-    MODELS_GEMINI_2_5_FLASH_PREVIEW_NATIVE_AUDIO_DIALOG_RAI_V3 = 'models/gemini-2.5-flash-preview-native-audio-dialog-rai-v3'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_TTS = 'models/gemini-2.5-flash-preview-tts'
     MODELS_GEMINI_2_5_PRO_EXP_03_25 = 'models/gemini-2.5-pro-exp-03-25'
     MODELS_GEMINI_2_5_PRO_PREVIEW_03_25 = 'models/gemini-2.5-pro-preview-03-25'
     MODELS_GEMINI_2_5_PRO_PREVIEW_05_06 = 'models/gemini-2.5-pro-preview-05-06'
     MODELS_GEMINI_2_5_PRO_PREVIEW_TTS = 'models/gemini-2.5-pro-preview-tts'
-    MODELS_GEMINI_EMBEDDING_EXP = 'models/gemini-embedding-exp'
-    MODELS_GEMINI_EMBEDDING_EXP_03_07 = 'models/gemini-embedding-exp-03-07'
     MODELS_GEMINI_EXP_1206 = 'models/gemini-exp-1206'
     MODELS_GEMINI_PRO_VISION = 'models/gemini-pro-vision'
     MODELS_GEMMA_3_12B_IT = 'models/gemma-3-12b-it'
@@ -68,10 +59,7 @@ class Model(Enum):
     MODELS_GEMMA_3_27B_IT = 'models/gemma-3-27b-it'
     MODELS_GEMMA_3_4B_IT = 'models/gemma-3-4b-it'
     MODELS_GEMMA_3N_E4B_IT = 'models/gemma-3n-e4b-it'
-    MODELS_IMAGEN_3_0_GENERATE_002 = 'models/imagen-3.0-generate-002'
     MODELS_LEARNLM_2_0_FLASH_EXPERIMENTAL = 'models/learnlm-2.0-flash-experimental'
-    MODELS_TEXT_EMBEDDING_004 = 'models/text-embedding-004'
-    MODELS_VEO_2_0_GENERATE_001 = 'models/veo-2.0-generate-001'
     ALLAM_2_7B = 'allam-2-7b'
     COMPOUND_BETA = 'compound-beta'
     COMPOUND_BETA_MINI = 'compound-beta-mini'
@@ -183,9 +171,6 @@ model_to_provider = {
     Model.CLAUDE_3_OPUS_20240229: Provider.ANTHROPIC,
     Model.CLAUDE_OPUS_4_20250514: Provider.ANTHROPIC,
     Model.CLAUDE_SONNET_4_20250514: Provider.ANTHROPIC,
-    Model.MODELS_AQA: Provider.GOOGLE,
-    Model.MODELS_EMBEDDING_001: Provider.GOOGLE,
-    Model.MODELS_EMBEDDING_GECKO_001: Provider.GOOGLE,
     Model.MODELS_GEMINI_1_0_PRO_VISION_LATEST: Provider.GOOGLE,
     Model.MODELS_GEMINI_1_5_FLASH: Provider.GOOGLE,
     Model.MODELS_GEMINI_1_5_FLASH_001: Provider.GOOGLE,
@@ -209,26 +194,20 @@ model_to_provider = {
     Model.MODELS_GEMINI_2_0_FLASH_LITE_001: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_FLASH_LITE_PREVIEW: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_FLASH_LITE_PREVIEW_02_05: Provider.GOOGLE,
-    Model.MODELS_GEMINI_2_0_FLASH_LIVE_001: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_FLASH_PREVIEW_IMAGE_GENERATION: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_FLASH_THINKING_EXP: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_FLASH_THINKING_EXP_01_21: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_FLASH_THINKING_EXP_1219: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_PRO_EXP: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_PRO_EXP_02_05: Provider.GOOGLE,
-    Model.MODELS_GEMINI_2_5_FLASH_EXP_NATIVE_AUDIO_THINKING_DIALOG: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17_THINKING: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_05_20: Provider.GOOGLE,
-    Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_NATIVE_AUDIO_DIALOG: Provider.GOOGLE,
-    Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_NATIVE_AUDIO_DIALOG_RAI_V3: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_TTS: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_EXP_03_25: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_PREVIEW_03_25: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_PREVIEW_05_06: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_PREVIEW_TTS: Provider.GOOGLE,
-    Model.MODELS_GEMINI_EMBEDDING_EXP: Provider.GOOGLE,
-    Model.MODELS_GEMINI_EMBEDDING_EXP_03_07: Provider.GOOGLE,
     Model.MODELS_GEMINI_EXP_1206: Provider.GOOGLE,
     Model.MODELS_GEMINI_PRO_VISION: Provider.GOOGLE,
     Model.MODELS_GEMMA_3_12B_IT: Provider.GOOGLE,
@@ -236,10 +215,7 @@ model_to_provider = {
     Model.MODELS_GEMMA_3_27B_IT: Provider.GOOGLE,
     Model.MODELS_GEMMA_3_4B_IT: Provider.GOOGLE,
     Model.MODELS_GEMMA_3N_E4B_IT: Provider.GOOGLE,
-    Model.MODELS_IMAGEN_3_0_GENERATE_002: Provider.GOOGLE,
     Model.MODELS_LEARNLM_2_0_FLASH_EXPERIMENTAL: Provider.GOOGLE,
-    Model.MODELS_TEXT_EMBEDDING_004: Provider.GOOGLE,
-    Model.MODELS_VEO_2_0_GENERATE_001: Provider.GOOGLE,
     Model.ALLAM_2_7B: Provider.GROQ,
     Model.COMPOUND_BETA: Provider.GROQ,
     Model.COMPOUND_BETA_MINI: Provider.GROQ,
