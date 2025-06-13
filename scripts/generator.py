@@ -17,14 +17,25 @@ def load_clients():
         'OPENAI': OpenAI(api_key=os.environ.get('OPENAI_KEY')),
     }
 
+def is_text_model(model_name: str) -> bool:
+    """Filter out non-text models and models requiring special parameters."""
+    name = model_name.lower()
+    non_text = ['whisper', 'tts', 'audio', 'dall-e', 'image', 'embedding', 
+                'moderation', 'guard', 'realtime', 'search', 'transcribe',
+                'babbage', 'davinci', 'computer-use', 'o1-mini', 'o1-preview',
+                'saba', 'gpt-3.5-turbo-16k', 'gpt-3.5-turbo-instruct']
+    return not any(keyword in name for keyword in non_text)
+
 def fetch_model_ids(clients):
     # get the lists of models
     return {
         'ANTHROPIC': [model.id for model in clients['ANTHROPIC'].models.list(limit=20).data],
         'GOOGLE': [model.name for model in clients['GOOGLE'].models.list() 
                    if 'generateContent' in getattr(model, 'supported_actions', [])],
-        'GROQ': [model.id for model in clients['GROQ'].models.list().data],
-        'OPENAI': [model.id for model in clients['OPENAI'].models.list().data],
+        'GROQ': [model.id for model in clients['GROQ'].models.list().data 
+                 if is_text_model(model.id)],
+        'OPENAI': [model.id for model in clients['OPENAI'].models.list().data 
+                   if is_text_model(model.id)],
     }
 
 
@@ -63,7 +74,7 @@ def main():
     model_ids = fetch_model_ids(clients)
     enum_code = generate_enums(model_ids)
 
-    output_path = Path('enums.py')
+    output_path = Path('llmpy_models.py')
     output_path.write_text(enum_code)
     
 
