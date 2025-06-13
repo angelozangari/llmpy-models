@@ -1,6 +1,6 @@
 [project]
 name = "llmpy_models"
-version = "0.0.3"
+version = "0.0.17"
 description = "Automatically generated LLM models for llmpy-lib"
 readme = "README.md"
 authors = [{ name = "Angelo Zangari", email = "angelo.zangari10@gmail.com" }]
