@@ -39,10 +39,13 @@ class Model(Enum):
     MODELS_GEMINI_2_0_FLASH_THINKING_EXP_1219 = 'models/gemini-2.0-flash-thinking-exp-1219'
     MODELS_GEMINI_2_0_PRO_EXP = 'models/gemini-2.0-pro-exp'
     MODELS_GEMINI_2_0_PRO_EXP_02_05 = 'models/gemini-2.0-pro-exp-02-05'
+    MODELS_GEMINI_2_5_FLASH = 'models/gemini-2.5-flash'
+    MODELS_GEMINI_2_5_FLASH_LITE_PREVIEW_06_17 = 'models/gemini-2.5-flash-lite-preview-06-17'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17 = 'models/gemini-2.5-flash-preview-04-17'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17_THINKING = 'models/gemini-2.5-flash-preview-04-17-thinking'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_05_20 = 'models/gemini-2.5-flash-preview-05-20'
     MODELS_GEMINI_2_5_FLASH_PREVIEW_TTS = 'models/gemini-2.5-flash-preview-tts'
+    MODELS_GEMINI_2_5_PRO = 'models/gemini-2.5-pro'
     MODELS_GEMINI_2_5_PRO_EXP_03_25 = 'models/gemini-2.5-pro-exp-03-25'
     MODELS_GEMINI_2_5_PRO_PREVIEW_03_25 = 'models/gemini-2.5-pro-preview-03-25'
     MODELS_GEMINI_2_5_PRO_PREVIEW_05_06 = 'models/gemini-2.5-pro-preview-05-06'
@@ -141,10 +144,13 @@ model_to_provider = {
     Model.MODELS_GEMINI_2_0_FLASH_THINKING_EXP_1219: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_PRO_EXP: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_0_PRO_EXP_02_05: Provider.GOOGLE,
+    Model.MODELS_GEMINI_2_5_FLASH: Provider.GOOGLE,
+    Model.MODELS_GEMINI_2_5_FLASH_LITE_PREVIEW_06_17: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_04_17_THINKING: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_05_20: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_FLASH_PREVIEW_TTS: Provider.GOOGLE,
+    Model.MODELS_GEMINI_2_5_PRO: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_EXP_03_25: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_PREVIEW_03_25: Provider.GOOGLE,
     Model.MODELS_GEMINI_2_5_PRO_PREVIEW_05_06: Provider.GOOGLE,

@@ -35,4 +35,4 @@ echo "Bumped version from $current to $new"
 
 # build and upload
 python -m build
-python -m twine upload --config-file .pypirc dist/*
+python -m twine upload --config-file ~/.pypirc --repository llmpy_models dist/*
